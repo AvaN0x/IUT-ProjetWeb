@@ -1,0 +1,268 @@
+html {
+    scroll-behavior: smooth
+}
+body {
+    font-family: Arial, serif, sans-serif, monospace;
+    margin: 0;
+    background-color: #d7d7d7
+}
+@font-face { /* source : https://www.dafont.com/potra.font?fpp=100&text=UnivOS */
+    font-family: Potra;
+    src: url(font/Potra.ttf)
+}
+@supports (-ms-ime-align:auto) { /* support minimum de edge */
+    section {
+        background: rgb(255,255,255)
+    } 
+}
+
+
+header {
+    margin: 0;
+    padding: 20px;
+    width: auto;
+    height: 120px;
+    background: white;
+    text-align: center;
+    z-index: 2
+}
+header h1 {
+    margin: 0;
+    font-family: Potra, Arial, serif, sans-serif, monospace;
+    font-size: 4em;
+    color: #323231;
+    transition: color .5s linear
+}
+header h1:after {
+    content: '';
+	margin: auto;
+	height: 1px;
+	width: 60%;
+	display: block;
+	background-color: #323231
+}
+header p {
+	font-weight: bold;
+	text-transform: uppercase
+}
+
+#menu {
+    padding: 7px 7px 7px 0;
+    position: relative;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0px 5px 5px #3b3b3b8a;
+    z-index: 1
+}
+#menu a {
+    color: #000;
+    text-decoration: none
+}
+#menu p {
+    display: none
+}
+#menu ol {
+    margin: 0;
+    list-style-type: upper-roman
+} 
+#menu li {
+    padding: 3px
+}
+#menu li:last-child {
+    width: calc(100% - 55px)
+}
+#menu img {
+    height: 50px;
+    float: right;
+    transform: translateY(-90%);
+    display: block    
+}
+
+.backimg {
+    width: 100%;
+    min-height: 300px;
+    height: 60vh;
+    position: relative;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center
+}
+.backimg.evolution {
+    background-image: url(images/backimg_evolution.jpeg) /* https://time.com/4271506/census-bureau-computer-history/ */
+}
+.backimg.influence {
+    background-image: url(images/backimg_influence.jpg) /* https://hojemacau.com.mo/2018/08/14/alibaba-mais-de-273-milhoes-para-centro-de-computacao-em-nuvem-e-plataforma-de-mega-dados// */
+}
+.backimg.enjeux {
+    background-image: url(images/backimg_enjeux.jpg); /* https://www.numerama.com/tech/198790-facebook-construit-un-3e-data-center-en-europe.html */
+    width: 101%
+}
+.backimg.nature {
+    background-image: url(images/backimg_nature.jpg) /* https://time.com/4271506/census-bureau-computer-history/ */
+}
+
+
+section {
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(255,255,255,.98);
+    box-shadow: 0px 0px 10px #3b3b3b
+}
+article {
+    margin: 25px 0 25px 0;
+    padding: 10px 20px 10px 20px;
+    clip-path: polygon(0 10px, 100% 0, 100% calc(100% - 10px), 0 100%);
+    background-color: #e2e2e2d5;
+    border: 2px solid #8080808a;
+    color: #3b3b3b;
+    text-align: justify;
+    overflow: hidden
+}
+h3, h2, article p {
+    margin: 5px;
+    padding: 0;
+    clear:both
+}
+h2 {
+    font-size: 1.3em
+    
+}
+h3 {
+    font-size: 1.1em;
+    margin-top: 15px;
+    font-style: italic
+}
+
+.influence header p,
+.influence article h2,
+.influence article h3,
+.influence article h3 a {
+    color: #59B9F3
+}
+.influence article {
+    border: 2px solid #59B9F38a
+}
+.enjeux header p,
+.enjeux article h2,
+.enjeux article h3,
+.enjeux article h3 a {
+    color: #2C75FF
+}
+.enjeux article {
+    border: 2px solid #2C75FF8a
+}
+.nature header p,
+.nature article h2,
+.nature article h3,
+.nature article h3 a {
+    color: #ba5db1
+}
+.nature article {
+    border: 2px solid #ba5db18a
+}
+
+.haut_de_page {
+    clear: both;
+    float: right;
+    margin-top: 5px;
+    text-decoration: none
+}
+article a {
+    color: #585858;
+    text-decoration: underline
+}
+article a:visited {
+    font-style: italic
+}
+a.source {
+    float: right;
+    text-decoration: none;
+    font-style: italic
+}
+
+
+footer {
+    padding: 2px;
+    position: relative;
+    background-color: #4A4A49;
+    border: 2px solid #323231;
+    color: white;
+    font-size: 1em
+}
+footer p {
+    margin: 1px auto 1px auto
+}
+
+footer img{
+    display: none
+}
+
+
+.timeline {
+    overflow: hidden;
+    padding: 5px 5px;
+    position: relative;
+    margin-right: 0;
+    width: 100%
+}
+.timeline:before {
+    content: '';
+    top: 15px;
+    width: 4px;
+    height: calc(100% - 30px);
+    background: rgb(70,70,70);
+    position: absolute;
+    left: 11px
+}
+.timeline .date {
+    background: white;
+    padding: 10px;
+    margin: 10px 5px 10px 25px;
+    width: auto;
+    border-radius: 14px;
+    position: relative
+}
+.timeline .date h4 span {
+    color: #adadad;
+    margin-right: 10px
+}
+.timeline .date h4 {
+    margin: 0
+}
+.timeline .date:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: white;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    position: absolute;
+    z-index: -1
+}
+.timeline .date:after {
+    content: '';
+    width: 13px;
+    height: 13px;
+    background: #adadad;
+    border-radius: 50%;
+    border: 3px solid #808080;
+    left: -26px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute
+}
+.timeline img {
+    height: 150px;
+    clip-path: polygon(5px 5px, 100% 0, calc(100% - 5px) calc(100% - 5px), 0 100%);
+    background-color: #e2e2e2d5;
+    border: 3px solid #808080;
+    margin-left: 40px
+}
+#audio_google audio{
+    position: relative;
+    top: 20px
+}
+
+
