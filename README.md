@@ -4,3 +4,6 @@ Projet tutoré du Semestre 1 du DUT.
 Projet HTML / CSS
 
 *Il est également présent sur mon site https://avan0x.github.io*
+
+![Repo Size](https://img.shields.io/github/repo-size/avan0x/IUT-ProjetWeb?logo=github)
+![License](https://img.shields.io/github/license/avan0x/IUT-ProjetWeb?logo=github)
