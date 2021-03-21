@@ -1,19 +1,25 @@
 html {
     scroll-behavior: smooth
 }
+
 body {
     font-family: Arial, serif, sans-serif, monospace;
     margin: 0;
     background-color: #d7d7d7
 }
-@font-face { /* source : https://www.dafont.com/potra.font?fpp=100&text=UnivOS */
+
+@font-face {
+    /* source : https://www.dafont.com/potra.font?fpp=100&text=UnivOS */
     font-family: Potra;
     src: url(font/Potra.ttf)
 }
-@supports (-ms-ime-align:auto) { /* support minimum de edge */
+
+@supports (-ms-ime-align:auto) {
+
+    /* support minimum de edge */
     section {
-        background: rgb(255,255,255)
-    } 
+        background: rgb(255, 255, 255)
+    }
 }
 
 
@@ -26,6 +32,7 @@ header {
     box-shadow: 0px 0px 10px #3b3b3b;
     text-align: center
 }
+
 header h1 {
     margin: 0;
     font-family: Potra, Arial, serif, sans-serif, monospace;
@@ -33,25 +40,29 @@ header h1 {
     color: #323231;
     transition: color .5s linear
 }
+
 header:hover h1 {
     color: black
 }
+
 header h1:after {
     content: '';
-	margin: auto;
-	height: 1px;
-	width: 10%;
-	display: block;
-	background-color: #323231;
-	transition: width 1s ease, background-color 1s ease
+    margin: auto;
+    height: 1px;
+    width: 10%;
+    display: block;
+    background-color: #323231;
+    transition: width 1s ease, background-color 1s ease
 }
+
 header:hover h1:after {
     width: 60%;
-	background-color: #323231
+    background-color: #323231
 }
+
 header p {
-	font-weight: bold;
-	text-transform: uppercase
+    font-weight: bold;
+    text-transform: uppercase
 }
 
 #menu {
@@ -70,42 +81,50 @@ header p {
     z-index: 1;
     overflow: hidden
 }
+
 #menu:hover {
     right: 5px
 }
+
 #menu a {
     color: #c9c9c9;
     text-decoration: none
 }
-#menu li:hover, 
-#menu li:hover a, 
-#menu a:hover { 
+
+#menu li:hover,
+#menu li:hover a,
+#menu a:hover {
     color: #fff;
     transition: color 1s
 }
+
 #menu a:after {
     content: '';
-	height: 1px;
-	width: 0;
-	display: block;
-	background-color: #c9c9c9;
-	transition: width 1s ease, background-color 2s ease
-} 
+    height: 1px;
+    width: 0;
+    display: block;
+    background-color: #c9c9c9;
+    transition: width 1s ease, background-color 2s ease
+}
+
 #menu a:hover:after {
     width: 70%;
-	background-color: #fff
+    background-color: #fff
 }
+
 #menu p {
     margin: 0 0 0 26px
 }
+
 #menu ol {
     margin: 0;
     list-style-type: upper-roman
-} 
+}
+
 #menu img {
     height: 25px;
     float: right;
-    transform: translateY(-90%)    
+    transform: translateY(-90%)
 }
 
 .backimg {
@@ -113,23 +132,31 @@ header p {
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-position: 0;
     position: fixed;
     z-index: -1
 }
+
 .backimg.evolution {
-    background-image: url(images/backimg_evolution.jpeg) /* https://time.com/4271506/census-bureau-computer-history/ */
+    background-image: url(images/backimg_evolution.jpeg)
+        /* https://time.com/4271506/census-bureau-computer-history/ */
 }
+
 .backimg.influence {
-    background-image: url(images/backimg_influence.jpg) /* https://hojemacau.com.mo/2018/08/14/alibaba-mais-de-273-milhoes-para-centro-de-computacao-em-nuvem-e-plataforma-de-mega-dados// */
+    background-image: url(images/backimg_influence.jpg)
+        /* https://hojemacau.com.mo/2018/08/14/alibaba-mais-de-273-milhoes-para-centro-de-computacao-em-nuvem-e-plataforma-de-mega-dados// */
 }
+
 .backimg.enjeux {
-    background-image: url(images/backimg_enjeux.jpg); /* https://www.numerama.com/tech/198790-facebook-construit-un-3e-data-center-en-europe.html */
+    background-image: url(images/backimg_enjeux.jpg);
+    /* https://www.numerama.com/tech/198790-facebook-construit-un-3e-data-center-en-europe.html */
     width: 101%
 }
+
 .backimg.nature {
-    background-image: url(images/backimg_nature.jpg) /* https://time.com/4271506/census-bureau-computer-history/ */
+    background-image: url(images/backimg_nature.jpg)
+        /* https://time.com/4271506/census-bureau-computer-history/ */
 }
 
 
@@ -139,19 +166,21 @@ header p {
     width: 100%;
     position: absolute
 }
+
 section {
     margin: auto;
     padding: 15px;
     width: auto;
     overflow: hidden;
     position: relative;
-    background-color: rgba(255,255,255,.98);
+    background-color: rgba(255, 255, 255, .98);
     box-shadow: 0px 0px 10px #3b3b3b
 }
+
 article {
     margin: 25px auto 25px auto;
     padding: 10px 20px 10px 20px;
-    max-width: 1100px; 
+    max-width: 1100px;
     clip-path: polygon(10px 10px, 100% 0, calc(100% - 10px) calc(100% - 10px), 0 100%);
     background-color: #e2e2e2d5;
     border: 2px solid #8080808a;
@@ -159,14 +188,19 @@ article {
     text-align: justify;
     overflow: hidden
 }
-h3, h2, article p {
+
+h3,
+h2,
+article p {
     margin: 10px 5px;
     padding: 0;
-    clear:both
+    clear: both
 }
+
 h2 {
     font-size: 1.3em
 }
+
 h3 {
     font-size: 1.1em;
     margin-top: 25px;
@@ -179,24 +213,29 @@ h3 {
 .influence article h3 a {
     color: #59B9F3
 }
+
 .influence article {
     border: 2px solid #59B9F38a
 }
+
 .enjeux header p,
 .enjeux article h2,
 .enjeux article h3,
 .enjeux article h3 a {
     color: #2C75FF
 }
+
 .enjeux article {
     border: 2px solid #2C75FF8a
 }
+
 .nature header p,
 .nature article h2,
 .nature article h3,
 .nature article h3 a {
     color: #ba5db1
 }
+
 .nature article {
     border: 2px solid #ba5db18a
 }
@@ -204,31 +243,38 @@ h3 {
 article p {
     text-indent: 15px;
 }
-.haut_de_page { /* visible que sur mobile */
+
+.haut_de_page {
+    /* visible que sur mobile */
     display: none
 }
+
 article a {
     color: #585858;
     text-decoration: underline
 }
+
 article a:visited {
     font-style: italic
 }
+
 a.source {
     float: right;
     text-decoration: none;
     font-style: italic;
     clear: both
 }
+
 .source:after {
     content: '';
-	height: 1px;
+    height: 1px;
     width: 0;
     margin: auto;
-	display: block;
-	background-color: #585858;
-	transition: width 1s ease, background-color 2s ease
-} 
+    display: block;
+    background-color: #585858;
+    transition: width 1s ease, background-color 2s ease
+}
+
 .source:hover:after {
     width: 70%
 }
@@ -242,19 +288,21 @@ footer {
     color: white;
     font-size: 1em
 }
+
 footer p {
     margin: 1px auto 1px auto;
     max-width: 1100px;
     text-align: center
 }
 
-footer img{
+footer img {
     height: 20px;
     position: relative;
     float: left
 }
+
 footer:before {
-    content:'Le site est adapté pour Google Chrome et Mozilla Firefox';
+    content: 'Le site est adapté pour Google Chrome et Mozilla Firefox';
     position: absolute;
     bottom: 20px;
     background-color: #cfcfcfd5;
@@ -266,8 +314,14 @@ footer:before {
     z-index: 1;
     opacity: 0
 }
+
 footer:hover:before {
     opacity: .9
+}
+
+footer a {
+    color: inherit;
+    text-decoration: inherit;
 }
 
 
@@ -278,15 +332,17 @@ footer:hover:before {
     margin-right: 0;
     width: 100%
 }
+
 .timeline:before {
     content: '';
     top: 30px;
     width: 4px;
     height: calc(100% - 60px);
-    background: rgb(70,70,70);
+    background: rgb(70, 70, 70);
     position: absolute;
     left: 22px
 }
+
 .timeline .date {
     background: white;
     padding: 10px;
@@ -295,13 +351,16 @@ footer:hover:before {
     border-radius: 14px;
     position: relative
 }
+
 .timeline .date h4 span {
     color: #adadad;
     margin-right: 10px
 }
+
 .timeline .date h4 {
     margin: 0
 }
+
 .timeline .date:before {
     content: '';
     width: 20px;
@@ -313,6 +372,7 @@ footer:hover:before {
     position: absolute;
     z-index: -1
 }
+
 .timeline .date:after {
     content: '';
     width: 26px;
@@ -325,6 +385,7 @@ footer:hover:before {
     transform: translateY(-50%);
     position: absolute
 }
+
 .timeline img {
     height: 150px;
     clip-path: polygon(5px 5px, 100% 0, calc(100% - 5px) calc(100% - 5px), 0 100%);

@@ -235,6 +235,11 @@ footer img {
     display: none
 }
 
+footer a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 
 .timeline {
     overflow: hidden;
